@@ -1,0 +1,173 @@
+html{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: monospace, 'Courier New', Courier; */
+    font-size: 24px;
+}
+
+button{
+    transition: 300ms;
+    border-radius: 25px;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin: -200px 0 0 -200px;
+}
+
+.timer-digits{
+    font-family: monospace;
+    font-weight: 100;
+}
+
+.timer-buttons{
+    flex-direction: column;
+    margin-top: 10%;
+    gap: 10px;
+}
+
+.btn-reset{
+    background-color: #ff0000;
+    color: #fff;
+    border: #ff0000 1px solid;
+}
+.btn-reset:hover{
+    background-color: transparent;
+    color: #ff0000;
+    border: #ff0000 1px solid;
+}
+
+.timer-countdown{
+    flex-direction: column;
+}
+.timer-countdown label{
+    margin-top: 20px;
+}
+
+.control{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.control input{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.control-slider{
+    cursor: pointer;
+    width: 48px;
+    height: 24px;
+    background-color: gray;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.control-slider::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+input:checked + .control-slider::after{
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+@media (prefers-color-scheme: dark) {
+    html{
+        background-color: #fff;
+        color: #174C38;
+    }
+
+    button{
+        background-color: #174C38;
+        color: #BBDDE6;
+        border: #174C38 1px solid;
+
+        font-size: 16px;
+        font-weight: bold;
+        width: 120px;
+        height: 40px;
+    }
+    button:hover{
+        background-color: transparent;
+        color: #174C38;
+        border: #174C38 1px solid;
+
+        font-size: 16px;
+        font-weight: bold;
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    input:checked + .control-slider{
+        background-color: #174C38;
+    }
+
+    .timer-display{
+        border: #174C38 4px solid;
+        border-radius: 200px;
+        height: 100%;
+    }
+}
+@media (prefers-color-scheme: light) {
+    html{
+        background-color: #174C38;
+        color: #BBDDE6;
+    }
+
+    button{
+        background-color: #BBDDE6;
+        color: #174C38;
+        border: #BBDDE6 1px solid;
+
+        font-size: 16px;
+        font-weight: bold;
+        width: 120px;
+        height: 40px;
+    }
+    button:hover{
+        background-color: transparent;
+        color: #BBDDE6;
+        border: #BBDDE6 1px solid;
+
+        font-size: 16px;
+        font-weight: bold;
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    input:checked + .control-slider{
+        background-color: #34A798;
+    }
+    
+    .timer-display{
+        border: #BBDDE6 4px solid;
+        border-radius: 200px;
+        height: 100%;
+    }
+}
