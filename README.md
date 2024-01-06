@@ -10,16 +10,16 @@ A lightweight web page that functions as a timer using HTML, CSS, and JavaScript
 
 ## Files
 
-- `index.html`: HTML file for the timer web page.
-- `styles.css`: CSS file for styling.
-- `script.js`: JavaScript file for functionality.
+- `timer.html`: HTML file for the timer web page.
+- `timer.css`: CSS file for styling.
+- `timer.js`: JavaScript file for functionality.
 
 ## Usage
 
 1. Open `index.html` in a web browser.
 2. Choose the desired mode:
    - **Incremental Timer**: Click "Start" to begin counting up. Click "Stop" to pause the timer.
-   - **Pomodoro Timer**: Click "Start Pomodoro" to initiate the 15-minute work cycle. After completion, a 5-minute rest cycle begins.
+   - **Pomodoro Timer**: Toggle the slider to set the timer to "Pomodoro Mode" and initiate the 15-minute work cycle. After completion, a 5-minute rest cycle begins.
 
 ## License
 
