@@ -95,7 +95,7 @@ input:checked + .control-slider::after{
     transform: translateX(-100%);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     html{
         background-color: #fff;
         color: #174C38;
@@ -133,7 +133,7 @@ input:checked + .control-slider::after{
         height: 100%;
     }
 }
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     html{
         background-color: #174C38;
         color: #BBDDE6;
