@@ -9,6 +9,17 @@ let timer = null;
 let pomodoroFlag = false;
 let restFlag = false;
 
+// create button events
+document.getElementById("timer_run").addEventListener("click", function (e) {
+    handleTimer();
+});
+document.getElementById("timer_reset").addEventListener("click", function (e) {
+    resetTimer();
+});
+document.getElementById("slider").addEventListener("click", function (e) {
+    handlePomodoro();
+});
+
 function cheat(m, s){
     if (pomodoroFlag){
         minutes -= m;
@@ -28,7 +39,7 @@ function handleTimer(){
         else if (pomodoroFlag && restFlag && minutes === 0){
             minutes = 5;
         }
-        timer = setInterval(toggleTimer, 5);
+        timer = setInterval(toggleTimer, 100);
     }
     else{
         timer = clearInterval(timer);
@@ -102,7 +113,7 @@ function handleMseconds(){
         mseconds -= 5;
         return;
     }
-    mseconds += 5;
+    mseconds += 100;
 }
 
 function handleSeconds(){
